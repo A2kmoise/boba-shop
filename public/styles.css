@@ -1,0 +1,178 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  background-color: rgb(228, 155, 130);
+}
+
+
+body{
+  margin-inline:40px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+ 
+}
+h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+}
+input{
+  background-color: white;
+}
+label{
+  background-color: white;
+}
+form h2{
+  background-color: white;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 120px;
+  padding-top: -40px;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+}
+nav li{
+  margin-left: 20px;
+}
+nav li a{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.btn {
+  background: white;
+  border-radius: 30px;
+  display: inline-block;
+  transform: translateX(-20px);
+  position: relative;
+  transition: transform 2s ease, background-color 2s ease, color 2s ease, text-decoration 2s ease;
+}
+
+.btn:hover {
+  transform: translateX(0);
+  background-color: rgb(207, 177, 166);
+  color: white;
+  text-decoration: underline;
+}
+
+form h2{
+  font-size: 2.4em;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+form{
+  width: 360px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: white;
+}
+input{
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+label{
+  display: block;
+  margin: 20px 0 10px;
+}
+button{
+  margin-top: 30px;
+  border-radius: 36px;
+  background: #FEE996;
+  border:0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.error{
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+header{
+  display: flex;
+  align-items: center;
+}
+@keyframes shake {
+  0% { transform: rotateY(20deg) rotateY(0deg); }
+  25% { transform: rotateY(20deg) rotateY(30deg); }
+  50% { transform: rotateY(20deg) rotateY(60deg); }
+  75% { transform: rotateY(20deg) rotateY(30deg); }
+  100% { transform: rotateY(20deg) rotateY(0deg); }
+}
+
+header img {
+  width: 250px;
+  margin-right: 40px;
+  animation: shake 5s infinite ease;
+  animation-delay: 20s;
+}
+
+header h2{
+  font-size: 3em;
+  padding-bottom: 10px;
+}
+header h3{
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  color: #fdf9f9;
+}
+header .btn{
+  margin-top: 20px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.8em;
+}
+.recipes{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 80px;
+  margin: 80PX AUTO;
+  max-width: 1200px;
+}
+.recipe{
+  display: inline-block;
+  border-radius: 20px;
+  background: rgb(238, 232, 232);
+  position: relative;
+  text-align: center;
+  padding: 0 20px 30px 20px
+}
+.recipe img{
+  width: 100px;
+  margin: -30px auto 20px;
+}
+footer{
+  text-align: center;
+  padding-top: 160px;
+  color: #fcf9f9;
+}
