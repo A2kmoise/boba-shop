@@ -12,6 +12,12 @@ body{
   letter-spacing: 1px;
  
 }
+
+nav .btn:hover{
+  background-color: rgb(207, 177, 166);
+  color: white;
+  text-decoration: underline;
+}
 h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
   margin: 0;
   padding: 0;
@@ -169,7 +175,6 @@ header .btn{
 }
 .recipe img{
   width: 100px;
-  margin: -30px auto 20px;
 }
 footer{
   text-align: center;
