@@ -11,7 +11,7 @@ BobaShop is a simple e-commerce website for bubble tea, built with:
 
 ## 📁 Project Structure
 
-/bobashop ├── public/ # Static files (CSS, images) ├── views/ # EJS templates ├── routes/ # Route handlers ├── controllers/ # Controller logic ├── models/ # Mongoose schemas ├── app.js # Main Express app ├── .env # Environment variables └── package.json # Project metadata & dependencies
+/bobashop ├── public/  ├── views/ ├── routes/ ├── controllers/  ├── models/ ├── app.js  ├── .env  └── package.json 
 
 
 ---
