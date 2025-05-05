@@ -13,41 +13,30 @@ const userSchema = new mongoose.Schema({
     password: {
         type:String,
         required: [true, 'Please enter the password'],
-        minlength: [6, 'Password should have atleast 6 characters'],
+        minlength: [6, 'Password should have at least 6 characters'],
     }
 })
 
-// this is to fire a function after a doc is saved to db
-/*userSchema.post('save' ,  function (doc , next) {
-    console.log('new user created and saved' , doc)
-    next()
-})
-*/
-// this is to fire a function before a  doc is saved to db
-
-userSchema.pre('save' , async function(next) {
-   // console.log('new user is about to be created and saved', this) 
+// Hash password before saving
+userSchema.pre('save', async function(next) {
    const salt =  await bcrypt.genSalt();
-   this.password = await  bcrypt.hash(this.password, salt)
-    next()
+   this.password = await bcrypt.hash(this.password, salt)
+   next()
 })
 
-// static method  to login user
+// Static login method
 userSchema.statics.login = async function (email, password) {
-    const user = await this.findOne({email})
+    const user = await this.findOne({ email })
 
     if (user) {
-      const auth = await bcrypt.compare( password, user.password)
-      
-      if (auth) {
-        return user; 
-      }
+      const auth = await bcrypt.compare(password, user.password)
+      if (auth) return user
       throw Error('incorrect password')
     } 
     throw Error('incorrect email')
 }
 
+// ✅ This line prevents OverwriteModelError
+const User = mongoose.models.user || mongoose.model('user', userSchema)
 
-const User = mongoose.model('user', userSchema)
-
-module.exports = User;
+module.exports = User
