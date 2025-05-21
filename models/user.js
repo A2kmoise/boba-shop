@@ -36,7 +36,7 @@ userSchema.statics.login = async function (email, password) {
     throw Error('incorrect email')
 }
 
-// ✅ This line prevents OverwriteModelError
+
 const User = mongoose.models.user || mongoose.model('user', userSchema)
 
 module.exports = User

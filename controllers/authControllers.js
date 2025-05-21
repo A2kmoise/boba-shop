@@ -83,3 +83,6 @@ module.exports.logout_get = ( req ,res) => {
   res.cookie('jwt', '', {maxAge:1});
   res.redirect('/');
 }
+module.exports.notfound = ( req, res) => {
+  res.render('notfound');
+}
